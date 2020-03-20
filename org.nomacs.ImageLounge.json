@@ -67,6 +67,17 @@
             ]
         },
         {
+            "name": "nomacs-plugins",
+            "subdir": "nomacs-plugins",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/nomacs/nomacs-plugins/archive/3.14.tar.gz",
+                    "sha512": "c0bca87e50b7b91d80a9d6afd95eeb1d6730b17b9a28ad4109514b36c42781b3f67b25f68f48c0953110d1e02bb03762e813af9c1ec2851c072b4aea74969cbd"
+                }
+            ]
+        },
+        {
             "name": "nomacs",
             "buildsystem": "cmake-ninja",
             "config-opts": [
