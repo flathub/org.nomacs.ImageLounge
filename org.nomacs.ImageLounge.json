@@ -67,13 +67,14 @@
             ]
         },
         {
-            "name": "nomacs-plugins",
-            "subdir": "nomacs-plugins",
+            "name": "heif",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nomacs/nomacs-plugins/archive/3.14.tar.gz",
-                    "sha512": "c0bca87e50b7b91d80a9d6afd95eeb1d6730b17b9a28ad4109514b36c42781b3f67b25f68f48c0953110d1e02bb03762e813af9c1ec2851c072b4aea74969cbd"
+                    "url": "https://github.com/jakar/qt-heif-image-plugin/archive/0.3.3.tar.gz",
+                    "sha512": "ba617d11e73d73dee5220b668918e313b6d856cabc1567b9221ddb2b3d35c4bfefadcd9e4485bdc7c280be104d09c3580e245d9a8f72c9fac397ebe84fe55e2f"
                 }
             ]
         },
