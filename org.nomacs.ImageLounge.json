@@ -67,6 +67,18 @@
             ]
         },
         {
+            "name": "libheif",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/strukturag/libheif/releases/download/v1.6.2/libheif-1.6.2.tar.gz",
+                    "sha512": "41848c05d88f82827ebdd0662a1870ce8b7899f6a86ef5aa483b301176602da8e69d2c5a49b4d911bc0cac51bdab81a06fd43efae2722092cc09c02119c95f07"
+                }
+            ]
+        },
+        {
             "name": "heif",
             "buildsystem": "cmake-ninja",
             "builddir": true,
