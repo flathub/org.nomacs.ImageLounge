@@ -79,18 +79,6 @@
             ]
         },
         {
-            "name": "heif",
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/jakar/qt-heif-image-plugin/archive/0.3.3.tar.gz",
-                    "sha512": "ba617d11e73d73dee5220b668918e313b6d856cabc1567b9221ddb2b3d35c4bfefadcd9e4485bdc7c280be104d09c3580e245d9a8f72c9fac397ebe84fe55e2f"
-                }
-            ]
-        },
-        {
             "name": "nomacs",
             "buildsystem": "cmake-ninja",
             "config-opts": [
