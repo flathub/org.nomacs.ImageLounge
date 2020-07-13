@@ -78,6 +78,12 @@
                     "type": "archive",
                     "url": "https://github.com/nomacs/nomacs/archive/3.15.1616.tar.gz",
                     "sha512": "f2720d201696aedd4c55507fd30cd8fbe91dfbe75a1510a5d0ee87dd3472773367515e2ce5bc21264c056be9fd8e22b37b4c119622c9109ff53947b68de1d825"
+                },
+                {
+                    "type": "archive",
+                    "dest": "ImageLounge/plugins",
+                    "url": "https://github.com/nomacs/nomacs-plugins/archive/3.15.1616.tar.gz",
+                    "sha512": "8cf49ade3b71724034f4e18b9a65764a24d77cee9ef8e463813087022f9fe3273f2bf69582bec7821ec4d6d1ea36b6537fde7f7f041a502fce3ff4bb58dcf6e3"
                 }
             ]        
         }
