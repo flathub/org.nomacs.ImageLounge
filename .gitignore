@@ -1,3 +1,5 @@
 .flatpak-builder/
 build/
 repo/
+build_x86_64
+org.nomacs.ImageLounge_x86_64.flatpak
