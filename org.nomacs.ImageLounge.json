@@ -10,7 +10,8 @@
         "--socket=wayland",
         "--socket=pulseaudio",
         "--filesystem=home",
-        "--filesystem=/media"
+        "--filesystem=/media",
+        "--filesystem=xdg-run/gvfs"
     ],
     "command": "nomacs",
     "cleanup": [
