@@ -1,16 +1,17 @@
 {
     "app-id": "org.nomacs.ImageLounge",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-21.08",
+    "runtime-version": "5.15-23.08",
     "sdk": "org.kde.Sdk",
     "finish-args": [
         "--device=dri",
         "--share=ipc",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
         "--filesystem=home",
-        "--filesystem=/media"
+        "--filesystem=/media",
+        "--filesystem=/run/media"
     ],
     "command": "nomacs",
     "cleanup": [
@@ -18,7 +19,8 @@
         "/lib/pkgconfig",
         "/share/aclocal",
         "/share/man",
-        "*.la", "*.a"
+        "*.la",
+        "*.a"
     ],
     "modules": [
         {
@@ -30,8 +32,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.exiv2.org/builds/exiv2-0.27.5-Source.tar.gz",
-                    "sha256": "35a58618ab236a901ca4928b0ad8b31007ebdc0386d904409d825024e45ea6e2"
+                    "url": "https://github.com/Exiv2/exiv2/releases/download/v0.27.7/exiv2-0.27.7-Source.tar.gz",
+                    "sha256": "70629dc27e3d4dd5c3fa91afbea93166d338b1de284e6a4c44bbf9dcfe7bbc6d"
                 }
             ]
         },
@@ -39,6 +41,9 @@
             "name": "opencv",
             "buildsystem": "cmake-ninja",
             "builddir": true,
+            "config-opts": [
+                "-DWITH_FFMPEG=OFF"
+            ],
             "sources": [
                 {
                     "type": "archive",
