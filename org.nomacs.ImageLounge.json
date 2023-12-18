@@ -100,6 +100,10 @@
                     "dest": "ImageLounge/plugins",
                     "url": "https://github.com/nomacs/nomacs-plugins/archive/3.16.tar.gz",
                     "sha512": "cd72f6ddbe3e07d7ed97f08405bac7574f4f3285c81e835f5630e011c8a9b105f23d892fed8084cb35ce521aca5524db071d0edb8bb04850dd2209d9ed019747"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/imagelounge-appdata-screenshots.patch"
                 }
             ]
         }
