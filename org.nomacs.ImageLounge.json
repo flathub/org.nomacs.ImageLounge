@@ -92,8 +92,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nomacs/nomacs/archive/3.16.224.tar.gz",
-                    "sha512": "7ca8e713eedd71bc3dd3804a9a09ece15badb74949b155ea4da72a0ea129be173c8d0951604a6139d4490525cd420da8635773c11f0d133f666a48dcd9064257"
+                    "url": "https://github.com/nomacs/nomacs/archive/refs/tags/3.17.2295.tar.gz",
+                    "sha512": "896ecbca1924657a1efe878274dcccfce38ebbe325ce8aef52a2c89316b1f6d2f8464dffa9d4f6d090ba7ddd56835507da38320f440b046179c8fe26025919d8"
                 },
                 {
                     "type": "archive",
