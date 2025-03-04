@@ -1,8 +1,18 @@
 {
     "app-id": "org.nomacs.ImageLounge",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-23.08",
+    "runtime-version": "6.8",
     "sdk": "org.kde.Sdk",
+    "add-extensions": {
+        "org.freedesktop.Platform.ffmpeg-full": {
+            "version": "24.08",
+            "directory": "lib/ffmpeg",
+            "add-ld-path": "."
+        }
+    },
+    "cleanup-commands": [
+        "mkdir -p ${FLATPAK_DEST}/lib/ffmpeg"
+    ],
     "finish-args": [
         "--device=dri",
         "--share=ipc",
@@ -27,13 +37,15 @@
             "name": "exiv2",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+                "-DEXIV2_BUILD_EXIV2_COMMAND=OFF",
+                "-DEXIV2_ENABLE_INIH=OFF"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/Exiv2/exiv2/releases/download/v0.27.7/exiv2-0.27.7-Source.tar.gz",
-                    "sha256": "70629dc27e3d4dd5c3fa91afbea93166d338b1de284e6a4c44bbf9dcfe7bbc6d"
+                    "url": "https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.5.tar.gz",
+                    "sha512": "43c1d68255ee8df124b3093e1f4101d2f55fd8d6105bb6f20b148fe7d59472b895f0cba914e59f6d1581e84eee9d7033572821b80c16507e92abcb9a738daadc"
                 }
             ]
         },
@@ -42,43 +54,50 @@
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "config-opts": [
-                "-DWITH_FFMPEG=OFF"
+                "-DWITH_FFMPEG=OFF",
+                "-DBUILD_opencv_apps=OFF"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/opencv/opencv/archive/4.1.0.tar.gz",
-                    "sha256": "8f6e4ab393d81d72caae6e78bd0fd6956117ec9f006fba55fcdb88caf62989b7"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/opencv-16369.patch",
-                    "only-arches": [
-                        "aarch64"
-                    ]
+                    "url": "https://github.com/opencv/opencv/archive/refs/tags/4.11.0.tar.gz",
+                    "sha512": "3b6e0da8169449944715de9e66380977791069a1d8288534ec768eaa2fb68533821fd8e06eac925a26656baf42185258b13aa80579e1e9be3ebc18fcea66f24d"
                 }
             ]
         },
         {
             "name": "libraw",
             "buildsystem": "autotools",
+            "config-opts": [
+                "--disable-examples"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.libraw.org/data/LibRaw-0.19.5.tar.gz",
-                    "sha512": "4560045f75e6d2ab0d1d8686075f3a0e26a5d7ce693b48508110a2c31d19055d58983c24852da0abb64fa90db5e20f24b87aa7537ed04d958c38c8b265a7e826"
+                    "url": "https://github.com/LibRaw/LibRaw/archive/refs/tags/0.21.3.tar.gz",
+                    "sha512": "c88d02685ac8854ca4f718206ceb95b17abffceee6501390d8447f9e8c78864d1dd0aedbdcf97e600244f97e1a50cbfea21d15a2557710c7d175f61915f9fe37"
+                },
+                {
+                    "type": "script",
+                    "commands": [
+                        "autoreconf --install --symlink"
+                    ]
                 }
+
             ]
         },
         {
             "name": "quazip",
             "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DQUAZIP_QT_MAJOR_VERSION=6"
+            ],
             "builddir": true,
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/stachenov/quazip/archive/v0.8.1.tar.gz",
-                    "sha512": "d65dab16c2cbc4d8bb23dae5b2fdff5ef787aaff2653b8e75c3fc8ba1701f5568a52bdde39009f83c5069a9fe3331cd1a49cf965822c4180e88bbc341faa2bfb"
+                    "type": "git",
+                    "url": "https://github.com/stachenov/quazip.git",
+                    "commit": "8aeb3f7d8254f4bf1f7c6cf2a8f59c2ca141a552"
                 }
             ]
         },
@@ -86,20 +105,23 @@
             "name": "nomacs",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DUSE_SYSTEM_QUAZIP=ON"
+                "-DENABLE_QUAZIP=ON",
+                "-DENABLE_TESTING=OFF",
+                "-DUSE_SYSTEM_QUAZIP=ON",
+                "-DQT_VERSION_MAJOR=6"
             ],
             "subdir": "ImageLounge",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nomacs/nomacs/archive/3.16.224.tar.gz",
-                    "sha512": "7ca8e713eedd71bc3dd3804a9a09ece15badb74949b155ea4da72a0ea129be173c8d0951604a6139d4490525cd420da8635773c11f0d133f666a48dcd9064257"
+                    "url": "https://github.com/nomacs/nomacs/archive/refs/tags/3.21.0.tar.gz",
+                    "sha512": "7e19d2ecedd700aa141a6975de6edfe836e2c36fe8511b933dd77100a1cd8201f8b1988b081d8c5d3383f2e66f636201d68417ef003a7321026ab6c48c509291"
                 },
                 {
                     "type": "archive",
                     "dest": "ImageLounge/plugins",
-                    "url": "https://github.com/nomacs/nomacs-plugins/archive/3.16.tar.gz",
-                    "sha512": "cd72f6ddbe3e07d7ed97f08405bac7574f4f3285c81e835f5630e011c8a9b105f23d892fed8084cb35ce521aca5524db071d0edb8bb04850dd2209d9ed019747"
+                    "url": "https://github.com/novomesk/nomacs-plugins/archive/refs/tags/3.21.0.tar.gz",
+                    "sha512": "abf0b0ba479b97ae8e10889f6c6ab18ae722189236a97be5c29a7252de8123d0744fb859bf6b57a2dc02f27c83d4f988cb1f22bb1d1df21802bd618437f6eed3"
                 },
                 {
                     "type": "patch",
