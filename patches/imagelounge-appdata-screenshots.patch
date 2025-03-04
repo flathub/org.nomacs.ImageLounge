@@ -1,20 +1,35 @@
+From be8a54120a0fbe4699f3cf3b451b7cffe5bb7500 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Daniel=20Novomesk=C3=BD?= <dnovomesky@gmail.com>
+Date: Tue, 4 Mar 2025 19:17:53 +0100
+Subject: [PATCH] add screenshots to org.nomacs.ImageLounge.appdata.xml.in
+
+---
+ .../org.nomacs.ImageLounge.appdata.xml.in         | 15 ++++++++++-----
+ 1 file changed, 10 insertions(+), 5 deletions(-)
+
 diff --git a/ImageLounge/xgd-data/org.nomacs.ImageLounge.appdata.xml.in b/ImageLounge/xgd-data/org.nomacs.ImageLounge.appdata.xml.in
-index 13449d7..deacd9c 100644
+index 3990415dc..59e991996 100644
 --- a/ImageLounge/xgd-data/org.nomacs.ImageLounge.appdata.xml.in
 +++ b/ImageLounge/xgd-data/org.nomacs.ImageLounge.appdata.xml.in
-@@ -33,11 +33,11 @@
+@@ -32,11 +32,16 @@
+         <content_attribute id="language-profanity">mild</content_attribute>
      </content_rating>
  
-     <screenshots>
--        <screenshot type="default">https://nomacs.org/wp-content/uploads/2020/03/img-2020-03-18-11.49.26-1.png</screenshot>
--        <screenshot type="default">https://nomacs.org/wp-content/uploads/2020/03/img-2020-03-18-11.59.10.png</screenshot>
-+        <screenshot type="default">https://github.com/flathub/org.nomacs.ImageLounge/raw/4521f054b41049aca4cbaf7d1b1f051d3d53f77a/screenshots/img-2020-03-18-11.49.26-1.png</screenshot>
-+        <screenshot type="default">https://github.com/flathub/org.nomacs.ImageLounge/raw/4521f054b41049aca4cbaf7d1b1f051d3d53f77a/screenshots/img-2020-03-18-11.59.10.png</screenshot>
-     </screenshots>
+-    <!-- TODO: new screenshots -->
+-    <!-- <screenshots> -->
+-    <!--     <screenshot type="default">https://nomacs.org/wp-content/uploads/2020/03/img-2020-03-18-11.49.26-1.png</screenshot> -->
+-    <!--     <screenshot type="default">https://nomacs.org/wp-content/uploads/2020/03/img-2020-03-18-11.59.10.png</screenshot> -->
+-    <!-- </screenshots> -->
++    <screenshots>
++        <screenshot type="default">
++            <image>https://github.com/nomacs/nomacs/raw/fbb4e3ef48f5264b15ebb16521a105d4518e6000/ImageLounge/screenshots/nomacs_3_21-thumbnails.png</image>
++            <caption>Image thumbnails in nomacs viewer</caption>
++        </screenshot>
++        <screenshot type="default">
++            <image>https://github.com/nomacs/nomacs/raw/fbb4e3ef48f5264b15ebb16521a105d4518e6000/ImageLounge/screenshots/nomacs_3_21-raw_metadata.png</image>
++            <caption>RAW image with metadata in nomacs viewer</caption>
++        </screenshot>
++    </screenshots>
  
      <releases>
          <release version="@NOMACS_VERSION@" date="@TODAY@"/>
-     </releases>
--</component>
-\ No newline at end of file
-+</component>
