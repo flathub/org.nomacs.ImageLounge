@@ -1,7 +1,7 @@
 {
     "app-id": "org.nomacs.ImageLounge",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.8",
+    "runtime-version": "6.9",
     "sdk": "org.kde.Sdk",
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
@@ -74,8 +74,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/LibRaw/LibRaw/archive/refs/tags/0.21.3.tar.gz",
-                    "sha512": "c88d02685ac8854ca4f718206ceb95b17abffceee6501390d8447f9e8c78864d1dd0aedbdcf97e600244f97e1a50cbfea21d15a2557710c7d175f61915f9fe37"
+                    "url": "https://github.com/LibRaw/LibRaw/archive/refs/tags/0.21.4.tar.gz",
+                    "sha512": "d8366d62f32f02466128ecfedf9a9b39289834a73d89d57004cf7df63919e66808ba283cddf5843b25fe903d72eb988ac5b490525083e2b5d84a05c7679b4014"
                 },
                 {
                     "type": "script",
@@ -95,9 +95,9 @@
             "builddir": true,
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/stachenov/quazip.git",
-                    "commit": "8aeb3f7d8254f4bf1f7c6cf2a8f59c2ca141a552"
+                    "type": "archive",
+                    "url": "https://github.com/stachenov/quazip/archive/refs/tags/v1.5.tar.gz",
+                    "sha512": "c88850f1672d20c375798c58d1cb77744ca63e93b379cf3035a528b57e83a52c1908023870152ce5fc49ad0ccf93d723dbc730b8c1d2abe18cf0b13fba3be1e1"
                 }
             ]
         },
@@ -114,18 +114,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nomacs/nomacs/archive/refs/tags/3.21.0.tar.gz",
-                    "sha512": "7e19d2ecedd700aa141a6975de6edfe836e2c36fe8511b933dd77100a1cd8201f8b1988b081d8c5d3383f2e66f636201d68417ef003a7321026ab6c48c509291"
+                    "url": "https://github.com/nomacs/nomacs/archive/refs/tags/3.21.1.tar.gz",
+                    "sha512": "127c2c04403d8a731e76db4182c33d0b005ed1484e6d00ee5cf59f55c319b836d38d877673f1d9a82f98dbcc1fe83674001eb8379814657a4b9b3d68ed82037b"
                 },
                 {
                     "type": "archive",
                     "dest": "ImageLounge/plugins",
-                    "url": "https://github.com/novomesk/nomacs-plugins/archive/refs/tags/3.21.0.tar.gz",
-                    "sha512": "abf0b0ba479b97ae8e10889f6c6ab18ae722189236a97be5c29a7252de8123d0744fb859bf6b57a2dc02f27c83d4f988cb1f22bb1d1df21802bd618437f6eed3"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/imagelounge-appdata-screenshots.patch"
+                    "url": "https://github.com/novomesk/nomacs-plugins/archive/refs/tags/3.21.1.tar.gz",
+                    "sha512": "c1a802e327a7ef6b06ddc4cb8e3127c655d5c5ef01a0540ea7d8d9b42a1372e88ce69b8d33425f49df5e96444d381fb7268f81ca9d41e86f0b39aea13a081106"
                 }
             ]
         }
