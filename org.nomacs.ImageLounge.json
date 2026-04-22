@@ -34,8 +34,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.7.tar.gz",
-                    "sha512": "b53f4989abcd5d346f2a9c726a06707c47e1990ecb2e5e193c963e01d452fefe4dddd14e25eb08ef35e2f8288b8ec4bdee60725aa7dcd6b1c0348ed56c803fc0"
+                    "url": "https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.8.tar.gz",
+                    "sha512": "e322438b565fe373e65baceeb4fd5173f538063b12b3d5a93d6e707da5020c818b1b9cc116f7bf0709635aa72b941dacb7a2bcfe6d946e2eaf7d9e55736dec5b"
                 }
             ]
         },
@@ -104,8 +104,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nomacs/nomacs/archive/refs/tags/3.22.0.tar.gz",
-                    "sha512": "f86b2738b35b30ac06c598ff86d00ef14bb7c1ab71f6c2b035af8258761cdb4b2e70280bbe5ba4e20bd264a7674d715ce3138357325ba2be7b43ec3214f24c64"
+                    "url": "https://github.com/nomacs/nomacs/archive/refs/tags/3.22.1.tar.gz",
+                    "sha512": "0c8f4b41a55c97b79a1a373a6e6dd6556f2a41e0f314f6ba7a7c4bfe98ec7994487e7fe4aee601e7427d7160a7759dbb64455f9ea37e5dc6a1f710825faf6873"
                 }
             ]
         }
