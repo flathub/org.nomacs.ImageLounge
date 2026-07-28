@@ -1,7 +1,7 @@
 {
     "app-id": "org.nomacs.ImageLounge",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.10",
+    "runtime-version": "6.11",
     "sdk": "org.kde.Sdk",
     "finish-args": [
         "--device=dri",
@@ -64,8 +64,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/LibRaw/LibRaw/archive/refs/tags/0.22.1.tar.gz",
-                    "sha512": "123050ea30366ada37b40e0aee84453f71f10a5e5e39261a1d16b96dc395f85a9ecdfd043d51b4c347a67546affdfa7ca84c10fa84d73b9b4070c074f1d301e8"
+                    "url": "https://github.com/LibRaw/LibRaw/archive/refs/tags/0.22.2.tar.gz",
+                    "sha512": "24313fbdc0f91432cf1de9fd1a7af56cc01c314760194a32fed8e7f5b991ff35e34fe04606e40ed86b3982f88e141c54b528d33631b420b71525abb06c95f5f4"
                 },
                 {
                     "type": "script",
@@ -97,15 +97,14 @@
             "config-opts": [
                 "-DENABLE_QUAZIP=ON",
                 "-DENABLE_TESTING=OFF",
-                "-DUSE_SYSTEM_QUAZIP=ON",
                 "-DQT_VERSION_MAJOR=6"
             ],
             "subdir": "ImageLounge",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nomacs/nomacs/archive/refs/tags/3.23.1.tar.gz",
-                    "sha512": "5dc2b57bf64cefe99be8c8e4031db9ee9927bf180043d7eeb2c38a5500199e5d4a56826751927044a45ed77d3bd0cb89bfb63b52d90d9d6e23bd9245f6ed7318"
+                    "url": "https://github.com/nomacs/nomacs/archive/refs/tags/3.23.3.tar.gz",
+                    "sha512": "5c47c595adda972ae9a72fdeb4a6aece94101526c6981da6437b594c8483a56be1cb135ae5b1bb2c14627834fb39396af64d870066e62cc6022042b16fe7ab1c"
                 }
             ]
         }
