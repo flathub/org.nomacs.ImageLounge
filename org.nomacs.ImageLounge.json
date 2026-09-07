@@ -34,8 +34,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.8.tar.gz",
-                    "sha512": "e322438b565fe373e65baceeb4fd5173f538063b12b3d5a93d6e707da5020c818b1b9cc116f7bf0709635aa72b941dacb7a2bcfe6d946e2eaf7d9e55736dec5b"
+                    "url": "https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.9.tar.gz",
+                    "sha512": "a7fa8fb19e54cdf0b9aac917087c86d45ea1b4a991a85ea8c5dd96af0289df63823901e44604d4c8df55883dcd19aee2efc48d7b5fde313dc0787b842a223a4a"
                 }
             ]
         },
@@ -50,8 +50,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/opencv/opencv/archive/refs/tags/4.13.0.tar.gz",
-                    "sha512": "ad677353cc1a4e51f2b9790724890eb65ec7633e0a658d63862767365b83d46e85791d691733e88c0f53d2b7294029c1b1ad8e5509c27d2edba8af7d63ade21e"
+                    "url": "https://github.com/opencv/opencv/archive/refs/tags/4.14.0.tar.gz",
+                    "sha512": "4f1e606cd24f74b49227a32bd1558882d3b01dbbadca8b49a0e07dd9fc6291b4c584d7f2c3951409758c3128dc53d38d84c4c7642c7a6f6a054a5eb9d5c6f91e"
                 }
             ]
         },
