@@ -11,6 +11,7 @@
         "--socket=pulseaudio",
         "--filesystem=home",
         "--filesystem=/media",
+        "--filesystem=/mnt",
         "--filesystem=/run/media"
     ],
     "command": "nomacs",
